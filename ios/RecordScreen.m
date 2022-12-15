@@ -97,6 +97,7 @@ RCT_REMAP_METHOD(startRecording, resolve:(RCTPromiseResolveBlock)resolve rejecte
     NSDictionary *compressionProperties = @{AVVideoProfileLevelKey         : AVVideoProfileLevelH264HighAutoLevel,
                                             AVVideoH264EntropyModeKey      : AVVideoH264EntropyModeCABAC,
                                             AVVideoAverageBitRateKey       : @(1920 * 1080 * 114),
+                                            AVVideoQualityKey              : @(0.1),
                                             AVVideoMaxKeyFrameIntervalKey  : @60,
                                             AVVideoAllowFrameReorderingKey : @NO};
 
