@@ -4,6 +4,8 @@ export type RecordingStartResponse = 'started';
 
 export type RecordScreenConfigType = {
   mic?: boolean;
+  width?: number;
+  height?: number;
 };
 
 export type RecordingSuccessResponse = {
