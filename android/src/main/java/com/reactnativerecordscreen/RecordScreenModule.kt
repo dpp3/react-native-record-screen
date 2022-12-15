@@ -123,6 +123,9 @@ class RecordScreenModule(reactContext: ReactApplicationContext) : ReactContextBa
     outputUri!!.delete();
     promise.resolve("cleaned");
   }
+  @ReactMethod
+  fun requestPermissions() {
+  }
 
   override fun HBRecorderOnStart() {
     println("HBRecorderOnStart")

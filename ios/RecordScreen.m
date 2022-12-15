@@ -59,6 +59,11 @@ RCT_EXPORT_METHOD(setup: (NSDictionary *)config)
     self.screenHeight = [RCTConvert int: config[@"height"]];
     self.enableMic = [RCTConvert BOOL: config[@"mic"]];
 }
+RCT_EXPORT_METHOD(requestPermissions)
+{
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+    }];
+}
 
 RCT_REMAP_METHOD(startRecording, resolve:(RCTPromiseResolveBlock)resolve rejecte:(RCTPromiseRejectBlock)reject)
 {
