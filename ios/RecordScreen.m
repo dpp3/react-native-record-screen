@@ -96,8 +96,8 @@ RCT_REMAP_METHOD(startRecording, resolve:(RCTPromiseResolveBlock)resolve rejecte
     
     NSDictionary *compressionProperties = @{AVVideoProfileLevelKey         : AVVideoProfileLevelH264HighAutoLevel,
                                             AVVideoH264EntropyModeKey      : AVVideoH264EntropyModeCABAC,
-                                            AVVideoAverageBitRateKey       : @(910 * 540 * 57),
-                                            AVVideoMaxKeyFrameIntervalKey  : @60,
+                                            AVVideoAverageBitRateKey       : @(1920 * 1080 * 114),
+                                            AVVideoMaxKeyFrameIntervalKey  : @20,
                                             AVVideoAllowFrameReorderingKey : @NO};
 
     NSLog(@"width: %d", [self adjustMultipleOf2:self.screenWidth]);
