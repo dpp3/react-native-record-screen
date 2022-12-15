@@ -23,7 +23,7 @@ export type RecordingResponse =
   | RecordingErrorResponse;
 
 type RecordScreenType = {
-  requestPermissions();
+  requestPermissions(): void;
   setup(config: RecordScreenConfigType): void;
   startRecording(
     config?: RecordScreenConfigType
