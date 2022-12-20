@@ -105,8 +105,8 @@ RCT_REMAP_METHOD(startRecording, resolve:(RCTPromiseResolveBlock)resolve rejecte
     if (@available(iOS 11.0, *)) {
         NSDictionary *videoSettings = @{AVVideoCompressionPropertiesKey : compressionProperties,
                                         AVVideoCodecKey                 : AVVideoCodecTypeH264,
-                                        AVVideoWidthKey                 : @([self adjustMultipleOf2:270]),
-                                        AVVideoHeightKey                : @([self adjustMultipleOf2:455])};
+                                        AVVideoWidthKey                 : @([self adjustMultipleOf2:self.screenWidth]),
+                                        AVVideoHeightKey                : @([self adjustMultipleOf2:self.screenHeight])};
 
         self.videoInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
     } else {
